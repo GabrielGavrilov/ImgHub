@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/Posts.css">
+        <title><%= pageTitle %></title>
+    </head>
+    <body>
+        <header>
+            <%- include('./Partials/Header.ejs') %>
+        </header>
+        <div class="empty-div-top">
+        </div>
+        <main>
+            <% image.forEach((image)=> { %>
+                <div class="image-div">
+                    <div class="image-container">
+                        <img class="image-style" src="data:image/<%= image.img.contentType %>;base64, <%= image.img.data.toString('base64') %>">
+                        <div class="img-info">
+                            <a href="/api/like/<%= image._id %>">
+                                <img src="https://img.icons8.com/material-outlined/24/fa314a/like--v1.png"/>
+                            </a>
+                            <p class="img-likes"><%= image.likes %></p>
+                            <a href="/img/<%= image._id %>">
+                                <img class="comment-bubble" src="https://img.icons8.com/windows/24/ffffff/topic--v1.png"/>
+                            </a>
+                            <p class="img-comments"><%= image.comments %></p>
+                            <div class="image-uploader-div">
+                                <a href="/user/<%= image.uploader %>" class="image-uploader"><p>@<%= image.uploader %></p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% if(curSession.loggedIn == true) { %>
+                    <div class="comment-div">
+                        <div class="comment-form-style">
+                            <form action="/api/comment/<%= image._id %>" method="POST">
+                                <input type="text" class="comment-box-style" name="commentInput" required placeholder="Comment on this post!" autocomplete="off">
+                                <div class="submit-button-comment">
+                                    <button type="submit" class="submit-btn">Comment</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                <% } else { %>
+                    <div class="comment-div">
+                        <div class="comment-form-style">
+                            <form action="/api/comment/<%= image._id %>" method="POST">
+                                <input type="text" class="comment-box-style" name="commentInput" required disabled placeholder="You must be logged in to comment." autocomplete="off">
+                                <div class="submit-button-comment">
+                                    <button type="submit" class="submit-btn">Comment</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+               <% } %>
+                <% comments.forEach((comments)=> { %>
+                    <div class="comments">
+                        <div class="comment-section">
+                            <div class="comment-info">
+                                <a class="author-name" href="/user/<%= comments.commentAuthor %>">
+                                    <p>@<%= comments.commentAuthor %></p>
+                                </a>
+                                <p class="date-style"><%= comments.createdAt %></p>
+                            </div>
+                            <div class="comment-text">
+                                <p><%= comments.commentText %></p>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            <% }) %>
+            <div class="empty-div-bottom">
+            </div>
+        </main>
+        <footer>
+            <%- include('./Partials/BottomHeader.ejs') %>
+        </footer>
+    </body>
+</html>

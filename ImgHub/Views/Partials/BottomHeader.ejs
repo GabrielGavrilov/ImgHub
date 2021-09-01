@@ -1,0 +1,30 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/BottomHeader.css">
+
+<div class="bottom-nav">
+    <div class="menu">
+        <div class="home-button">
+            <a href="/">
+                <img class="btn" src="https://img.icons8.com/material-outlined/35/ffffff/home--v2.png"/>
+            </a>
+        </div>
+        <div class="add-button">
+            <a href="/upload">
+                <img class="btn" src="https://img.icons8.com/ios-glyphs/35/ffffff/plus-math.png"/>
+            </a>
+        </div>
+        <div class="user-button">
+            <% if(curSession.loggedIn == true) { %>
+                <a href="/user/<%= curSession.username %> ">
+                    <img class="btn" src="https://img.icons8.com/material-outlined/35/ffffff/user--v1.png"/>
+                </a>
+            <% } else { %>
+                <a href="/login">
+                    <img class="btn" src="https://img.icons8.com/material-outlined/35/ffffff/user--v1.png"/>
+                </a>
+            <% } %>
+        </div>
+    </div>
+</div>

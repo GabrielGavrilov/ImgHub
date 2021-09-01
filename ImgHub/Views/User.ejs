@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= pageTitle %></title>
+        <link rel="stylesheet" href="/User.css">
+    </head>
+    <body>
+        <header>
+            <%- include('./Partials/UserHeader.ejs') %> 
+        </header>
+        <main>
+            <div class="empty-div-top">
+            </div>
+            </div>
+            <% if(images.length > 0) { %>
+                <% images.forEach((images)=> { %>
+                    <div class="image-div">
+                        <div class="image-container">
+                            <a href="/post/<%= images._id %>">
+                                <img class="image-style" src="data:images/<%= images.img.contentType %>;base64, <%= images.img.data.toString('base64') %>">
+                            </a>
+                            <div class="img-info">
+                                <a href="/api/like/<%= images._id %>">
+                                    <img src="https://img.icons8.com/material-outlined/24/fa314a/like--v1.png"/>
+                                </a>
+                                <p class="img-likes"><%= images.likes %></p>
+                                <a href="/img/<%= images._id %>">
+                                    <img class="comment-bubble" src="https://img.icons8.com/windows/24/ffffff/topic--v1.png"/>
+                                </a>
+                                <p class="img-comments"><%= images.comments %></p>
+                                <div class="image-uploader-div">
+                                    <a href="/user/<%= images.uploader %>" class="image-uploader"><p>@<%= images.uploader %></p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <div class="no-images-div">
+                    <h2>No images found...</h2>
+                </div>
+            <% } %>
+            <div class="empty-div-bottom">
+            </div>
+        </main>
+    </body>
+    <footer>
+        <%- include('./Partials/BottomHeader.ejs') %>
+    </footer> 
+</html>

@@ -1,0 +1,148 @@
+.empty-div-top {
+    color: transparent;
+    width: 100%;
+    height: 1vh;
+    padding-bottom: 3vh;
+}
+
+.image-div {
+    padding-top: 3vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    width: 65vh;
+}
+
+.image-style {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.img-info {
+    display: flex;
+}
+
+.img-likes {
+    padding-left: 0.1vh;
+    font-size: large;
+    color: #f2f2f2;
+}
+
+.comment-bubble {
+    padding-left: 1vh;
+}
+
+.img-comments {
+    padding-left: 0.1vh;
+    font-size: large;
+    color: #f2f2f2;
+}
+
+.image-uploader-div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image-uploader {
+    color: #f2f2f2;
+
+    text-decoration: none;
+    font-size: large;
+}
+
+.empty-div-bottom {
+    color: transparent;
+    width: 100%;
+    height: 4vh;
+    padding-top: 3vh;
+}
+
+.empty-div-bottom {
+    color: transparent;
+    width: 100%;
+    height: 4vh;
+    padding-top: 3vh;
+}
+
+.no-images-div {
+    padding-top: 2.5vh;
+    display: flex;
+    justify-content: center;
+    color: #f2f2f2;
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 414px) {
+    .image-container {
+        width: 50vh;
+    }
+
+    .empty-div-top {
+        padding-top: 3vh;
+    }
+
+    .empty-div-bottom {
+        padding-bottom: 3vh;
+    }
+}
+
+@media screen and (max-width: 411px) {
+    .image-container {
+        width: 50vh;
+    }
+
+    .empty-div-top {
+        padding-top: 3vh;
+    }
+
+    .empty-div-bottom {
+        padding-bottom: 3vh;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .image-container {
+        width: 40vh;
+    }
+
+    .empty-div-top {
+        padding-top: 1vh;
+    }
+
+    .empty-div-bottom {
+        padding-bottom: 1vh;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .image-container {
+        width: 50vh;
+    }
+
+    .empty-div-top {
+        padding-top: 4vh;
+    }
+
+    .empty-div-bottom {
+        padding-bottom: 4vh;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .image-container {
+        width: 35vh;
+    }
+
+    .empty-div-top {
+        padding-top: 2vh;
+    }
+
+    .empty-div-bottom {
+        padding-bottom: 2vh;
+    }
+}
+

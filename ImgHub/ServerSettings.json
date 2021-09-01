@@ -1,0 +1,7 @@
+{
+    "PORT": 3000,
+    "HOST": "localhost",
+    "DBURI": "PUT YOUR DBURI HERE",
+    "SECRET_KEY": "PUT YOUR SECRET KEY HERE",
+    "SERVER_VERSION": "v1.0.0"
+}

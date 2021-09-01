@@ -1,0 +1,313 @@
+.empty-div-top {
+    color: transparent;
+    width: 100%;
+    height: 1vh;
+    padding-bottom: 3vh;
+}
+
+.image-div {
+    padding-top: 3vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    width: 65vh;
+}
+
+.image-style {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.img-info {
+    display: flex;
+}
+
+.img-likes {
+    padding-left: 0.1vh;
+    font-size: large;
+    color: #f2f2f2;
+}
+
+.comment-bubble {
+    padding-left: 1vh;
+}
+
+.img-comments {
+    padding-left: 0.1vh;
+    font-size: large;
+    color: #f2f2f2;
+}
+
+.image-uploader-div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image-uploader {
+    color: #f2f2f2;
+
+    text-decoration: none;
+    font-size: large;
+}
+
+.comment-div {
+    padding-top: 1vh;
+    display: flex;
+    justify-content: center;
+}
+
+.comment-form-style {
+    width: 65vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.comment-box-style {
+    background-color: #1f1f1f;
+    border: none;
+    border-radius: 4px;
+    color: #f2f2f2;
+    font-size: larger;
+    padding: 10px;
+    padding-bottom: 1vh;
+    width: 230%;
+}
+
+.comment-box-style:focus {
+    background-color: #2c2c2c;
+    border: none;
+    border-radius: 4px;
+    color: #f2f2f2;
+    font-size: larger;
+    padding: 10px;
+    outline: none;
+
+    position: relative;
+}
+
+.submit-button-comment {
+    padding-top: 0.5vh;
+}
+
+.submit-btn {
+    font-size: larger;
+    padding: 1vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    cursor: pointer;
+    border: none;
+    background-color: #1f1f1f;
+    color: #d3d3d3;
+    border-radius: 6px;
+
+    position: relative;
+}
+
+.submit-btn:hover {
+    font-size: larger;
+    padding: 1vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    cursor: pointer;
+    border: none;
+    background-color: #2c2c2c;
+    color: #f2f2f2;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+.empty-div-bottom {
+    color: transparent;
+    width: 100%;
+    height: 4vh;
+    padding-top: 3vh;
+}
+
+.comments {
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
+}
+
+.comment-section {
+    width: 65vh;
+}
+
+.comment-info {
+    font-weight: bold;
+    padding-bottom: 0.5vh;
+    display: flex;
+    opacity: 0.7;
+}
+
+.date-style {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    color: #f2f2f2;
+    font-size: small;
+    font-weight: 100;
+}
+
+.author-name {
+    text-decoration:none!important;
+    color: #f2f2f2;
+    font-style: normal;
+}
+
+.comment-text {
+    color: #f2f2f2;
+    padding-bottom: 1.5vh;
+}
+
+.hr-style {
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .comment-box-style {
+        width: 335%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .comment-box-style {
+        width: 248%;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+    .comment-form-style {
+        width: 65vh;
+    }
+
+    .comment-box-style {
+        width: 173%;
+    }
+
+}
+
+
+@media screen and (max-width: 414px) {
+    .image-container {
+        width: 50vh;
+    }
+
+    .comment-form-style {
+        width: 50vh;
+    }
+
+    .comment-box-style {
+        width: 135%;
+    }
+
+    .empty-div-top {
+        padding-top: 3vh;
+    }
+
+    .empty-div-bottom {
+        padding-bottom: 3vh;
+    }
+}
+
+@media screen and (max-width: 411px) {
+    .image-container {
+        width: 50vh;
+    }
+
+    .comment-form-style {
+        width: 50vh;
+    }
+
+    .comment-box-style {
+        width: 133%;
+    }
+
+    .empty-div-top {
+        padding-top: 3vh;
+    }
+
+    .empty-div-bottom {
+        padding-bottom: 3vh;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .image-container {
+        width: 40vh;
+    }
+
+    .comment-form-style {
+        width: 40vh;
+    }
+
+    .comment-box-style {
+        width: 110%;
+    }
+
+    .empty-div-top {
+        padding-top: 1vh;
+    }
+
+    .empty-div-bottom {
+        padding-bottom: 1vh;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .image-container {
+        width: 50vh;
+    }
+
+    .comment-form-style {
+        width: 50vh;
+    }
+
+    .comment-box-style {
+        width: 115%;
+    }
+
+    .empty-div-top {
+        padding-top: 4vh;
+    }
+
+    .empty-div-bottom {
+        padding-bottom: 4vh;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .comment-box-style {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .image-container {
+        width: 35vh;
+    }
+
+    .comment-form-style {
+        width: 35vh;
+    }
+
+    .comment-box-style {
+        width: 92%;
+    }
+
+    .empty-div-top {
+        padding-top: 2vh;
+    }
+
+    .empty-div-bottom {
+        padding-bottom: 2vh;
+    }
+}

@@ -1,0 +1,64 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/Header.css">
+
+<div class="header">
+    <div class="container">
+        <div class="header-menu">
+            <div class="site-title">
+                <a href="/" class="title-text"><p>ImgHub</p></a>
+            </div>
+            <div class="hamburger-menu">
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <% if(curSession.loggedIn == true) { %>
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Feed</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/upload" class="nav-link">Upload</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/user/<%= curSession.username %>" class="nav-link">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/api/logout" class="nav-link">Log out</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/GabrielGavrilov/ImgHub" class="nav-link">Github</a>
+                    </li>
+                    <li class="nav-item close-menu">
+                        <a class="nav-link">Close Menu</a>
+                    </li>
+                <% } else { %>
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Feed</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/upload" class="nav-link">Upload</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/login" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/register" class="nav-link">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/GabrielGavrilov/ImgHub" class="nav-link">Github</a>
+                    </li>
+                    <li class="nav-item close-menu">
+                        <a class="nav-link">Close Menu</a>
+                    </li>
+                <% } %>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<script src="/Menu.js"></script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= pageTitle %></title>
+        <link rel="stylesheet" href="Upload.css">
+    </head>
+    <body>
+        <header>
+            <%- include('./Partials/Header.ejs') %>
+        </header>
+        <main>
+            <div class="empty-div">
+            </div>
+            <div class="upload-text">
+                <p>Upload a file</p>
+            </div>
+            <div class="upload-files">
+                <form class="upload-form" action="/api/upload" method="POST" enctype="multipart/form-data">
+                    <div class="input-file">
+                        <input class="file-input" type="file" name="fileInput">
+                    </div>
+                    <div class="submit-button">
+                        <button class="submit-btn">Upload!</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <%- include('./Partials/BottomHeader.ejs') %>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,331 @@
+.empty-div {
+    color: transparent;
+    width: 100%;
+    height: 1vh;
+    padding-bottom: 6vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.error-message-div {
+    padding-top: 3vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.error-msg {
+    background-color: #e36d62;
+    outline: 2px solid #63231d;
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-message {
+    color: black;
+    font-size: large;
+    padding-left: 3vh;
+    padding-right: 3vh;
+}
+
+.login-title {
+    color: #f2f2f2;
+    padding-top: 3vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    padding-top: 3vh;
+    z-index: 1;
+    position: relative;
+    right: 7vh;
+}
+
+
+
+.username-input {
+    background-color: #1f1f1f;
+    border: none;
+    border-radius: 4px;
+    color: #f2f2f2;
+    font-size: larger;
+    padding: 10px;
+
+    width: 140%;
+}
+
+.username-input:focus {
+    background-color: #2c2c2c;
+    border: none;
+    border-radius: 4px;
+    color: #f2f2f2;
+    font-size: larger;
+    padding: 10px;
+    outline: none;
+
+    position: relative;
+}
+
+.password-form {
+    padding-top: 1vh;
+}
+
+.password-input {
+    background-color: #1f1f1f;
+    border: none;
+    border-radius: 4px;
+    color: #f2f2f2;
+    font-size: larger;
+    padding: 10px;
+
+    width: 140%;
+}
+
+.password-input:focus {
+    background-color: #2c2c2c;
+    border: none;
+    border-radius: 4px;
+    color: #f2f2f2;
+    font-size: larger;
+    padding: 10px;
+    outline: none;
+
+    position: relative;
+}
+
+.password-confirmation {
+    padding-top: 1vh;
+}
+
+.password-confirm-input {
+    background-color: #1f1f1f;
+    border: none;
+    border-radius: 4px;
+    color: #f2f2f2;
+    font-size: larger;
+    padding: 10px;
+
+    width: 140%;
+}
+
+.password-confirm-input:focus {
+    background-color: #2c2c2c;
+    border: none;
+    border-radius: 4px;
+    color: #f2f2f2;
+    font-size: larger;
+    padding: 10px;
+    outline: none;
+
+    position: relative;
+}
+
+.submit-btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    position: relative;
+    left: 7vh;
+}
+
+.submit-button {
+    font-size: larger;
+    padding: 1vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    cursor: pointer;
+    border: none;
+    background-color: #1f1f1f;
+    color: #d3d3d3;
+    border-radius: 6px;
+
+    position: relative;
+}
+
+.submit-button:hover {
+    font-size: larger;
+    padding: 1vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    cursor: pointer;
+    border: none;
+    background-color: #2c2c2c;
+    color: #f2f2f2;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+.no-account-text {
+
+    text-decoration: none;
+    color: #f2f2f2;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .login-form {
+        right: 3vh;
+    }
+
+    .submit-btn {
+        left: 4vh;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .login-form {
+        right: 6.5vh;
+    }
+
+    .submit-btn {
+        left: 7vh;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+    .login-form {
+        right: 7.5vh;
+    }
+
+    .submit-btn {
+        left: 8vh;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .login-form {
+        right: 7vh;
+    }
+
+    .username-input {
+        width: 130%;
+    }
+    .password-input {
+        width: 130%;
+    }
+    .password-confirm-input {
+        width: 130%;
+    }
+
+}
+
+@media screen and (max-width: 411px) {
+    .login-form {
+        right: 7vh;
+    }
+
+    .username-input {
+        width: 130%;
+    }
+    .password-input {
+        width: 130%;
+    }
+    .password-confirm-input {
+        width: 130%;
+    }
+
+    .submit-btn {
+        left: 6vh;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    .login-form {
+        right: 3.5vh;
+    }
+
+    .username-input {
+        width: 115%;
+    }
+    .password-input {
+        width: 115%;
+    }
+    .password-confirm-input {
+        width: 115%;
+    }
+
+    .submit-btn {
+        left: 5vh;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .login-form {
+        right: 3.5vh;
+    }
+
+    .username-input {
+        width: 110%;
+    }
+    .password-input {
+        width: 110%;
+    }
+    .password-confirm-input {
+        width: 110%;
+    }
+
+    .submit-btn {
+        left: 3vh;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .login-form {
+        right: 1.7vh;
+    }
+
+    .username-input {
+        width: 100%;
+    }
+    .password-input {
+        width: 100%;
+    }
+    .password-confirm-input {
+        width: 100%;
+    }
+
+    .submit-btn {
+        left: 2.5vh;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .login-form {
+        left: 0.5vh;
+    }
+
+    .username-input {
+        width: 90%;
+    }
+    .password-input {
+        width: 90%;
+    }
+    .password-confirm-input {
+        width: 90%;
+    }
+    .submit-btn {
+        left: 0vh;
+    }
+    .no-account-text {
+        font-size: medium;
+    }
+
+    .error-message {
+        font-size: small;
+    }
+}

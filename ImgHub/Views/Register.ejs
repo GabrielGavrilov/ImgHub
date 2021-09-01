@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= pageTitle %></title>
+        <link rel="stylesheet" href="Register.css">
+    </head>
+    <body>
+       <header>
+           <%- include('./Partials/FormHeader.ejs') %>
+       </header>
+       <div class="empty-div">
+       </div>
+       <main>
+           <div class="register-form-div">
+               <div class="error-message-div">
+                <% if(passwordConfrimationError.length > 0) { %>
+                    <div class="error-msg">
+                        <h2 class="error-message"><%= passwordConfrimationError %></h2>
+                    </div>
+            
+                <% } %>
+                <% if(passwordLengthError.length > 0) { %>
+                    <div class="error-msg">
+                        <h2 class="error-message"><%= passwordLengthError %></h2>
+                    </div>
+            
+                <% } %>
+                <% if(usernameTakenError.length > 0) { %>
+                    <div class="error-msg">
+                        <h2 class="error-message"><%= usernameTakenError %></h2>
+                    </div>
+            
+                <% } %>
+                <% if(tooLongUsernameError.length > 0) { %>
+                    <div class="error-msg">
+                        <h2 class="error-message"><%= tooLongUsernameError %></h2>
+                    </div>
+            
+                <% } %>
+               </div>
+               <div class="register-title">
+                   <h1>Sign Up</h1>
+               </div>
+               <form class="register-form" action="/api/register" method="POST">
+                    <div class="username-form">
+                        <input class="username-input" type="text" placeholder="Choose a username" required name="usernameInput">
+                    </div>
+                    <div class="password-form">
+                        <input class="password-input" type="password" placeholder="Choose a password" required name="passwordInput">
+                    </div>
+                    <div class="password-confirmation">
+                        <input class="password-confirm-input" type="password" placeholder="Confirm the password" required name="passwordConfirmation">
+                    </div>
+                    <div class="submit-btn">
+                        <button class="submit-button">Register</button>
+                    </div>
+               </form>
+               <p><a class="already-registered-text" href="/login">Already a user? Login here!</a></p>
+           </div>
+       </main> 
+       <footer>
+           <%- include('./Partials/BottomHeader.ejs') %>
+       </footer>
+    </body> 
+</html>
