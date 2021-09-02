@@ -29,7 +29,7 @@ main {
 
 .error-message {
     color: black;
-    font-size: large;
+    font-size: medium;
     padding-left: 3vh;
     padding-right: 3vh;
 }
