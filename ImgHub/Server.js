@@ -93,7 +93,7 @@ server.get('/', (req, res)=> {
             throw err
         } else {
             res.render('Home.ejs', {
-                pageTitle: "Feed :: ImgHub",
+                pageTitle: "Feed :: " + settings.WEBSITE_NAME,
                 curSession: req.session,
                 images: data
             })
@@ -108,7 +108,7 @@ server.get('/register', (req, res)=> {
         res.redirect('/')
     } else {
         res.render('Register.ejs', {
-            pageTitle: "Register :: ImgHub",
+            pageTitle: "Register :: " + settings.WEBSITE_NAME,
             passwordConfrimationError: req.flash('passwordConfrimationError'),
             passwordLengthError: req.flash('passwordLengthError'),
             usernameTakenError: req.flash('usernameTakenError'),
@@ -173,7 +173,7 @@ server.get('/login', (req, res)=> {
         res.redirect('/')
     } else {
         res.render('Login.ejs', {
-            pageTitle: "Login :: ImgHub",
+            pageTitle: "Login :: " + WEBSITE_NAME,
             userNotFoundError: req.flash('userNotFoundError'),
             curSession: req.session
         })
@@ -221,7 +221,7 @@ server.get('/api/logout', (req, res)=> {
 server.get('/upload', (req, res)=> {
     if(req.session.loggedIn == true) {
         res.render('Upload.ejs', {
-            pageTitle: "Upload :: ImgHub",
+            pageTitle: "Upload :: " + WEBSITE_NAME,
             curSession: req.session
         })
     } else {
@@ -292,7 +292,7 @@ server.get('/user/:username', (req, res)=> {
                     res.redirect('/')
                 } else if(userData) {
                     res.render('User.ejs', {
-                        pageTitle: `${username}'s posts :: ImgHub`,
+                        pageTitle: `${username}'s posts :: ${settings.WEBSITE_NAME}`,
                         curSession: req.session,
                         images: imgData,
                         userInfo: userData,
@@ -406,7 +406,7 @@ server.get('/post/:id', (req, res)=> {
                     throw err
                 } else {
                     res.render('Posts.ejs', {
-                        pageTitle: "Post :: ImgHub",
+                        pageTitle: "Post :: " + settings.WEBSITE_NAME,
                         curSession: req.session,
                         comments: commentData,
                         image: [fileData]
@@ -467,7 +467,7 @@ server.post('/api/comment/:id', (req, res)=> {
 //@DESCRIPTION: Renders the 404 page when the route is not found -- Don't like how it looks like, might update it later
 server.get('*', (req, res)=> {
     res.render('404.ejs', {
-        pageTitle: "404 Error :: ImgHub",
+        pageTitle: "404 Error :: " + settings.WEBSITE_NAME,
         curSession: req.session
     })
 })
