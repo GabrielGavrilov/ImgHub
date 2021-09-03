@@ -175,7 +175,7 @@ main {
 
 @media screen and (max-width: 1024px) {
     .login-form {
-        right: 3vh;
+        right: 4vh;
     }
 
     .submit-btn {
@@ -225,7 +225,7 @@ main {
 
 @media screen and (max-width: 411px) {
     .login-form {
-        right: 7vh;
+        right: 6.6vh;
     }
 
     .username-input {

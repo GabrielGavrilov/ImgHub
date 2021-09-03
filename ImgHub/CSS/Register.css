@@ -175,7 +175,7 @@ main {
 
 @media screen and (max-width: 1024px) {
     .register-form {
-        right: 3vh;
+        right: 4vh;
     }
 
     .submit-btn {
@@ -198,7 +198,7 @@ main {
 
 @media screen and (max-width: 540px) {
     .register-form {
-        right: 7.5vh;
+        right: 8.5vh;
     }
 
     .submit-btn {
@@ -246,7 +246,7 @@ main {
 
 @media screen and (max-width: 375px) {
     .register-form {
-        right: 3.5vh;
+        right: 3.7vh;
     }
 
     .username-input {
