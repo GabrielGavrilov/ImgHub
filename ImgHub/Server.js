@@ -173,7 +173,7 @@ server.get('/login', (req, res)=> {
         res.redirect('/')
     } else {
         res.render('Login.ejs', {
-            pageTitle: "Login :: " + WEBSITE_NAME,
+            pageTitle: "Login :: " + settings.WEBSITE_NAME,
             userNotFoundError: req.flash('userNotFoundError'),
             curSession: req.session
         })
