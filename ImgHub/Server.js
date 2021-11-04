@@ -1,5 +1,5 @@
 /*
-* ImgHub - An image sharing social network.
+* ImgHub - An image sharing platform.
 * @version 1.1.1
 * @authors Gabriel Gavrilov <gabrielgavrilov11@gmail.com>
 */
@@ -168,7 +168,7 @@ server.listen(settings.PORT, settings.HOST, (err)=> {
     if(err) {
         throw err;
     } else {
-        console.log(`\n ImgHub Web Server - ${settings.SERVER_VERSION}`)
+        console.log(`${settings.WEBSITE_NAME} Web Server - ${settings.SERVER_VERSION}`)
         console.log(`-------------------------------------------------------`)
         console.log('> Server is up and running.')
     }

@@ -9,5 +9,23 @@
     "fs": "^0.0.1-security",
     "mongoose": "^5.13.3",
     "multer": "^1.4.2"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "imghub",
+  "version": "1.1.1",
+  "description": "An image sharing platform.",
+  "main": "Server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielGavrilov/ImgHub.git"
+  },
+  "author": "Gabriel Gavrilov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielGavrilov/ImgHub/issues"
+  },
+  "homepage": "https://github.com/GabrielGavrilov/ImgHub#readme"
 }

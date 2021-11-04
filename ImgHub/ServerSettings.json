@@ -1,8 +1,8 @@
 {
-    "PORT": 3000,
-    "HOST": "localhost",
+    "WEBSITE_NAME": "ImgHub",
     "DBURI": "",
     "SECRET_KEY": "a very secret key",
     "SERVER_VERSION": "v1.1.1",
-    "WEBSITE_NAME": "ImgHub"
+    "PORT": 3000,
+    "HOST": "localhost"
 }
