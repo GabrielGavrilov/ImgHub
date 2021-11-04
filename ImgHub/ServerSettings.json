@@ -1,8 +1,8 @@
 {
     "PORT": 3000,
     "HOST": "localhost",
-    "DBURI": "ENTER YOUR DATABASE CONNECTION URL HERE",
-    "SECRET_KEY": "CREATE A SECRET PRIVATE KEY TO HANDLE SESSIONS",
-    "SERVER_VERSION": "v1.0.1",
-    "WEBSITE_NAME": "ENTER THE NAME OF YOUR WEBSITE HERE"
+    "DBURI": "",
+    "SECRET_KEY": "a very secret key",
+    "SERVER_VERSION": "v1.1.1",
+    "WEBSITE_NAME": "ImgHub"
 }

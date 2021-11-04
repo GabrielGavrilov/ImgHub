@@ -19,7 +19,7 @@
                     <div class="image-container">
                         <img class="image-style" src="data:image/<%= image.img.contentType %>;base64, <%= image.img.data.toString('base64') %>">
                         <div class="img-info">
-                            <a href="/api/like/<%= image._id %>">
+                            <a href="/post/like/<%= image._id %>">
                                 <img src="https://img.icons8.com/material-outlined/24/fa314a/like--v1.png"/>
                             </a>
                             <p class="img-likes"><%= image.likes %></p>
@@ -36,7 +36,7 @@
                 <% if(curSession.loggedIn == true) { %>
                     <div class="comment-div">
                         <div class="comment-form-style">
-                            <form action="/api/comment/<%= image._id %>" method="POST">
+                            <form action="/post/comment/<%= image._id %>" method="POST">
                                 <input type="text" class="comment-box-style" name="commentInput" required placeholder="Comment on this post!" autocomplete="off">
                                 <div class="submit-button-comment">
                                     <button type="submit" class="submit-btn">Comment</button>
@@ -47,7 +47,7 @@
                 <% } else { %>
                     <div class="comment-div">
                         <div class="comment-form-style">
-                            <form action="/api/comment/<%= image._id %>" method="POST">
+                            <form action="/post/comment/<%= image._id %>" method="POST">
                                 <input type="text" class="comment-box-style" name="commentInput" required disabled placeholder="You must be logged in to comment." autocomplete="off">
                                 <div class="submit-button-comment">
                                     <button type="submit" class="submit-btn">Comment</button>
@@ -76,7 +76,7 @@
             </div>
         </main>
         <footer>
-            <%- include('./Partials/BottomHeader.ejs') %>
+            <%- include('./Partials/BottomFooter.ejs') %>
         </footer>
     </body>
 </html>
