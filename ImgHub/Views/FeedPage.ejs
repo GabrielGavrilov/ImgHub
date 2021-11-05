@@ -5,6 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Feed - ImgHub</title>
+        <meta name="description" content="Check out all the latest and best images with image hub.">
+        <meta name="keywords" content="images, image, imagehub, image hub">
+        <meta name="author" content="ImageHub">
         <link rel="stylesheet" href="FeedPage.css">
     </head>
     <body>
@@ -19,7 +22,7 @@
                     <div class="image-div">
                         <div class="image-container">
                             <a href="/post/<%= images._id %>">
-                                <img class="image-style" src="data:images/<%= images.img.contentType %>;base64, <%= images.img.data.toString('base64') %>">
+                                <img class="image-style" src="data:images/<%= images.img.contentType %>;base64, <%= images.img.data.toString('base64') %>" alt="Image">
                             </a>
                             <div class="img-info">
                                 <a href="/post/like/<%= images._id %>">

@@ -19,7 +19,14 @@ const fileStorage = multer.diskStorage({
 
 //Creates the upload for the files
 const fileUpload = multer({
-    storage: fileStorage
+    storage: fileStorage,
+    fileFilter: (req, file, cb)=> {
+        const ext = path.extname(file.originalname)
+        if(ext != '.png' || ext != '.jpg' || ext != '.jpeg') {
+            return cb(new Error('Only images are allowed'))
+        }
+        cb(null, true)
+    }
 })
 
 // @POST: Upload Post
@@ -27,6 +34,10 @@ const fileUpload = multer({
 router.post('/upload', fileUpload.single('fileInput'), (req, res)=> {
     if(req.session.loggedIn == true) {
         const user = req.session.username
+
+        if(req.fileValidationError) {
+            res.redirect('/')
+        } 
 
         const newFile = new filesDB({
             img: {
