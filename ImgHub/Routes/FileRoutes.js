@@ -4,8 +4,8 @@ const router = express.Router()
 const multer = require('multer')
 const fs = require('fs')
 const path = require('path')
-const usersDB = require('../Models/Users.js')
-const filesDB = require('../Models/FileUpload.js')
+const usersDB = require('../Models/UserModel.js')
+const filesDB = require('../Models/FileUploadModel.js')
 
 //Creates the file storage
 const fileStorage = multer.diskStorage({

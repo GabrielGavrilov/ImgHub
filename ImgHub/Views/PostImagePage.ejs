@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/Posts.css">
-        <title><%= pageTitle %></title>
+        <link rel="stylesheet" href="/PostImagePage.css">
+        <title>Post - <%= websiteTitle %></title>
     </head>
     <body>
         <header>
@@ -23,7 +23,7 @@
                                 <img src="https://img.icons8.com/material-outlined/24/fa314a/like--v1.png"/>
                             </a>
                             <p class="img-likes"><%= image.likes %></p>
-                            <a href="/img/<%= image._id %>">
+                            <a href="/post/<%= image._id %>">
                                 <img class="comment-bubble" src="https://img.icons8.com/windows/24/ffffff/topic--v1.png"/>
                             </a>
                             <p class="img-comments"><%= image.comments %></p>
@@ -76,7 +76,7 @@
             </div>
         </main>
         <footer>
-            <%- include('./Partials/BottomFooter.ejs') %>
+            <%- include('./Partials/BottomNavBar.ejs') %>
         </footer>
     </body>
 </html>

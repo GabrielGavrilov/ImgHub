@@ -1,8 +1,8 @@
 const express = require('express')
 const session = require('express-session')
 const router = express.Router()
-const filesDB = require('../Models/FileUpload')
-const usersDB = require('../Models/Users')
+const filesDB = require('../Models/FileUploadModel')
+const usersDB = require('../Models/UserModel')
 const settings = require('../ServerSettings.json')
 
 // @ROUTE: User Route
@@ -22,8 +22,8 @@ router.get('/:username', (req, res)=> {
                 if(!userData) {
                     res.redirect('/')
                 } else if(userData) {
-                    res.render('User.ejs', {
-                        pageTitle: `${username}'s posts :: ${settings.WEBSITE_NAME}`,
+                    res.render('UserProfilePage.ejs', {
+                        pageTitle: `${username}'s posts - ${settings.WEBSITE_NAME}`,
                         curSession: req.session,
                         images: imgData,
                         userInfo: userData,

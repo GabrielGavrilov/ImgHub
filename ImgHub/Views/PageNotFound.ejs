@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page Not Found - <%= websiteTitle %></title>
+        <link rel="stylesheet" href="PageNotFound.css">
+    </head>
+    <body>
+        <header>
+            <%- include('./Partials/Header.ejs') %> 
+        </header>
+        <main>
+            <div class="empty-div-top">
+            </div>
+            <div class="error-information">
+                <div class="error-information-content">
+                    <div class="error-image">
+                        <img src="https://img.icons8.com/external-prettycons-lineal-prettycons/100/ffffff/external-404-web-and-seo-prettycons-lineal-prettycons.png"/>
+                    </div>
+                    <div class="error-text">
+                        <h1 class="oops-text">Oops!</h1>
+                        <p>We can't find the page you're looking for.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="empty-div-bottom">
+            </div>
+        </main>
+        <footer>
+            <%- include('./Partials/BottomNavBar.ejs') %>
+        </footer>
+    </body> 
+</html>

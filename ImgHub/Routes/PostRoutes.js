@@ -1,10 +1,10 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const router = express.Router()
-const usersDB = require('../Models/Users')
-const filesDB = require('../Models/FileUpload')
-const likeDB = require('../Models/Like')
-const commentDB = require('../Models/Comments')
+const usersDB = require('../Models/UserModel')
+const filesDB = require('../Models/FileUploadModel')
+const likeDB = require('../Models/LikeModel')
+const commentDB = require('../Models/CommentModel')
 const settings = require('../ServerSettings.json')
 
 //@ROUTE: Post Route
@@ -24,8 +24,8 @@ router.get('/:id', (req, res)=> {
                 if(err) {
                     throw err
                 } else {
-                    res.render('Posts.ejs', {
-                        pageTitle: "Post :: " + settings.WEBSITE_NAME,
+                    res.render('PostImagePage.ejs', {
+                        websiteTitle: settings.WEBSITE_NAME,
                         curSession: req.session,
                         comments: commentData,
                         image: [fileData]

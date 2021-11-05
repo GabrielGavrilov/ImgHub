@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><%= pageTitle %></title>
-        <link rel="stylesheet" href="Home.css">
+        <title>Feed - ImgHub</title>
+        <link rel="stylesheet" href="FeedPage.css">
     </head>
     <body>
         <header>
@@ -26,7 +26,7 @@
                                     <img src="https://img.icons8.com/material-outlined/24/fa314a/like--v1.png"/>
                                 </a>
                                 <p class="img-likes"><%= images.likes %></p>
-                                <a href="/img/<%= images._id %>">
+                                <a href="/post/<%= images._id %>">
                                     <img class="comment-bubble" src="https://img.icons8.com/windows/24/ffffff/topic--v1.png"/>
                                 </a>
                                 <p class="img-comments"><%= images.comments %></p>
@@ -37,16 +37,12 @@
                         </div>
                     </div>
                 <% }) %>
-            <% } else { %>
-                <div class="no-images-div">
-                    <h2>No images found...</h2>
-                </div>
             <% } %>
             <div class="empty-div-bottom">
             </div>
         </main>
         <footer>
-            <%- include('./Partials/BottomFooter.ejs') %>
+            <%- include('./Partials/BottomNavBar.ejs') %>
         </footer>
     </body> 
 </html>

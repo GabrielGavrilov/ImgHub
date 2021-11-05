@@ -20,10 +20,10 @@ const fs = require('fs')
 const path = require('path')
 const flash = require('connect-flash')
 
-const usersDB = require('./Models/Users.js')
-const filesDB = require('./Models/FileUpload.js')
-const likeDB = require('./Models/Like.js')
-const commentDB = require('./Models/Comments.js')
+const usersDB = require('./Models/UserModel.js')
+const filesDB = require('./Models/FileUploadModel.js')
+const likeDB = require('./Models/LikeModel.js')
+const commentDB = require('./Models/CommentModel.js')
 const server = express()
 
 const sessionRoutes = require('./Routes/SessionRoutes')
@@ -97,8 +97,8 @@ server.get('/', (req, res)=> {
         if(err) {
             throw err
         } else {
-            res.render('Home.ejs', {
-                pageTitle: "Feed :: " + settings.WEBSITE_NAME,
+            res.render('FeedPage.ejs', {
+                websiteTitle: settings.WEBSITE_NAME,
                 curSession: req.session,
                 images: data
             })
@@ -112,8 +112,8 @@ server.get('/register', (req, res)=> {
     if(req.session.loggedIn == true) {
         res.redirect('/')
     } else {
-        res.render('Register.ejs', {
-            pageTitle: "Register :: " + settings.WEBSITE_NAME,
+        res.render('RegisterPage.ejs', {
+            websiteTitle: settings.WEBSITE_NAME,
             passwordConfrimationError: req.flash('passwordConfrimationError'),
             passwordLengthError: req.flash('passwordLengthError'),
             usernameTakenError: req.flash('usernameTakenError'),
@@ -129,8 +129,8 @@ server.get('/login', (req, res)=> {
     if(req.session.loggedIn == true) {
         res.redirect('/')
     } else {
-        res.render('Login.ejs', {
-            pageTitle: "Login :: " + settings.WEBSITE_NAME,
+        res.render('LoginPage.ejs', {
+            websiteTitle: settings.WEBSITE_NAME,
             userNotFoundError: req.flash('userNotFoundError'),
             curSession: req.session
         })
@@ -141,8 +141,8 @@ server.get('/login', (req, res)=> {
 // @DESCRIPTION: Renders the upload file page
 server.get('/upload', (req, res)=> {
     if(req.session.loggedIn == true) {
-        res.render('Upload.ejs', {
-            pageTitle: "Upload :: " + settings.WEBSITE_NAME,
+        res.render('UploadPage.ejs', {
+            websiteTitle: settings.WEBSITE_NAME,
             curSession: req.session
         })
     } else {
@@ -153,8 +153,8 @@ server.get('/upload', (req, res)=> {
 //@ROUTE: 404 Error Route
 //@DESCRIPTION: Renders the 404 page when the route is not found -- Don't like how it looks like, might update it later
 server.get('*', (req, res)=> {
-    res.render('404.ejs', {
-        pageTitle: "404 Error :: " + settings.WEBSITE_NAME,
+    res.render('PageNotFound.ejs', {
+        websiteTitle: settings.WEBSITE_NAME,
         curSession: req.session
     })
 })

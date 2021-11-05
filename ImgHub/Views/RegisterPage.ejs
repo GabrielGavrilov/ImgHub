@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><%= pageTitle %></title>
-        <link rel="stylesheet" href="Register.css">
+        <title>Register - <%= websiteTitle %></title>
+        <link rel="stylesheet" href="RegisterPage.css">
     </head>
     <body>
        <header>
@@ -58,11 +58,11 @@
                         <button class="submit-button">Register</button>
                     </div>
                </form>
-               <p><a class="already-registered-text" href="/login">Already a user? Login here!</a></p>
+               <p><a class="already-registered-text" href="/login">Already a user?</a></p>
            </div>
        </main> 
        <footer>
-           <%- include('./Partials/BottomFooter.ejs') %>
+           <%- include('./Partials/BottomNavBar.ejs') %>
        </footer>
     </body> 
 </html>

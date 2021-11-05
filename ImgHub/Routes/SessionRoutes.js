@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const session = require('express-session')
 const router = express.Router()
-const usersDB = require('../Models/Users.js')
+const usersDB = require('../Models/UserModel.js')
 const flash = require('connect-flash')
 
 // @POST: Session Register Post
