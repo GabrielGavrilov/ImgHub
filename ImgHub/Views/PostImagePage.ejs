@@ -9,7 +9,7 @@
     </head>
     <body>
         <header>
-            <%- include('./Partials/Header.ejs') %>
+            <%- include('./Partials/FormHeader.ejs') %>
         </header>
         <div class="empty-div-top">
         </div>
@@ -63,7 +63,6 @@
                                 <a class="author-name" href="/user/<%= comments.commentAuthor %>">
                                     <p>@<%= comments.commentAuthor %></p>
                                 </a>
-                                <p class="date-style"><%= comments.createdAt %></p>
                             </div>
                             <div class="comment-text">
                                 <p><%= comments.commentText %></p>

@@ -216,6 +216,10 @@
     .empty-div-bottom {
         padding-bottom: 3vh;
     }
+
+    .comments {
+        padding-left: 4.5vh;
+    }
 }
 
 @media screen and (max-width: 411px) {
@@ -237,6 +241,10 @@
 
     .empty-div-bottom {
         padding-bottom: 3vh;
+    }
+
+    .comments {
+        padding-left: 4.5vh;
     }
 }
 
@@ -281,6 +289,10 @@
 
     .empty-div-bottom {
         padding-bottom: 4vh;
+    }
+
+    .comments {
+        padding-left: 4.5vh;
     }
 }
 

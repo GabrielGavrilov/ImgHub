@@ -166,4 +166,26 @@ router.post('/comment/:id', (req, res)=> {
     }
 })
 
+//@ROUTE: Delete Route
+//@DESCRIPTION: If user is admin, allow them to delete the post
+router.get('/delete/:id', (req, res)=> {
+
+    if(req.session.username == "admin") {
+        
+        const id = req.params.id
+
+        filesDB.deleteOne({'_id': id}, (err)=> {
+            if(err) {
+                throw err
+            } else {
+                console.log(`> ${id} has been deleted.`)
+                res.redirect('/')
+            }
+        })
+    } else {
+        res.redirect('/')
+    }
+
+})
+
 module.exports = router
