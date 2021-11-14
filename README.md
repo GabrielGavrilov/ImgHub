@@ -7,6 +7,12 @@ ImgHub is an image sharing platform that was intended for users on mobile phones
   <img src="https://user-images.githubusercontent.com/79603829/141690352-8d3a163d-a9d6-44bb-99f0-a04b78b1b4a4.png"/>
 </p>
 
+<h3 align="center">Desktop Preview</h3>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/79603829/141690483-3b45a0a7-793b-4345-abe0-98a497c98a0e.png"/>
+</p>
+
+
 ## Getting Started
 
 1) Make sure you have Node.JS & NPM installed on your system.
