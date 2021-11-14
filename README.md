@@ -12,3 +12,20 @@ ImgHub is an image sharing platform that was intended for users on mobile phones
 6) On the file, enter your MongoDB's connection url.
 7) Choose a Secret Key (optional)
 8) Run the program by typing ``npm start`` in the command terminal.
+
+## Features
+
+- Responsive web design (Desktop & Mobile support)
+- User profiles
+- Liking images
+- Commenting on images
+- Individual image pages
+- Admin support (Admins are able to delete images)
+- File upload filters (Only image files are uploaded, other files such as video files will stop the upload process)
+
+## Programming Languages
+
+ImgHub's back-end was written in Node.JS,
+ImgHub's front-end was written in EJS (HTML templating language) & CSS,
+Private server constants (``ServerSettings.json``) was stored in JSON,
+ImgHub's Database is inteded for MongoDB.
