@@ -25,7 +25,7 @@ ImgHub is an image sharing platform that was intended for users on mobile phones
 
 ## Programming Languages
 
-ImgHub's back-end was written in Node.JS,
-ImgHub's front-end was written in EJS (HTML templating language) & CSS,
-Private server constants (``ServerSettings.json``) was stored in JSON,
-ImgHub's Database is inteded for MongoDB.
+- ImgHub's back-end was written in Node.JS,
+- ImgHub's front-end was written in EJS (HTML templating language) & CSS,
+- Private server constants (``ServerSettings.json``) was stored in JSON,
+- ImgHub's Database is inteded for MongoDB.
