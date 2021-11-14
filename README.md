@@ -6,6 +6,9 @@ ImgHub is an image sharing platform that was intended for users on mobile phones
 
 1) Make sure you have Node.JS & NPM installed on your system.
 2) Clone the GitHub repository onto your system.
-3) Open the command terminal on the cloned repository's foldeer
-4) Type in ``npm install``
-5) 
+3) Open the command terminal on the cloned repository's folder.
+4) Install the required liberaries by typing``npm install`` in the command terminal.
+5) Open the ``ServerSettings.json`` file.
+6) On the file, enter your MongoDB's connection url.
+7) Choose a Secret Key (optional)
+8) Run the program by typing ``npm start`` in the command terminal.
