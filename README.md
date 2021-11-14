@@ -2,6 +2,12 @@
 
 ImgHub is an image sharing platform that was intended for users on mobile phones. ImgHub was not actually built for hosting, since this is suppose to be a representation on how image sharing social networks (such as like Instagram) work front-end and back-end. 
 
+Mobile Preview
+![image](https://user-images.githubusercontent.com/79603829/141690352-8d3a163d-a9d6-44bb-99f0-a04b78b1b4a4.png)
+
+Desktop Preview
+![image](https://user-images.githubusercontent.com/79603829/141690362-b73d36b3-1b30-4b03-9e25-496f71c4e023.png)
+
 ## Getting Started
 
 1) Make sure you have Node.JS & NPM installed on your system.
@@ -27,5 +33,5 @@ ImgHub is an image sharing platform that was intended for users on mobile phones
 
 - ImgHub's back-end was written in Node.JS,
 - ImgHub's front-end was written in EJS (HTML templating language) & CSS,
-- Private server constants (``ServerSettings.json``) was stored in JSON,
+- Private server constants (``ServerSettings.json``) are stored in a JSON file,
 - ImgHub's Database is inteded for MongoDB.
