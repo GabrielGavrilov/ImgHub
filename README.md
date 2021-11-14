@@ -2,8 +2,7 @@
 
 ImgHub is an image sharing platform that was intended for users on mobile phones. ImgHub was not actually built for hosting, since this is suppose to be a representation on how image sharing social networks (such as like Instagram) work front-end and back-end. 
 
-<p align="center">Mobile Preview</p>
-
+<h3 align="center">Mobile Preview</h3>
 <p align="center">
   <img src="https://user-images.githubusercontent.com/79603829/141690352-8d3a163d-a9d6-44bb-99f0-a04b78b1b4a4.png"/>
 </p>
